@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#103766" />
+  <title>Research Dashboard | บทที่ 4 ผลการวิเคราะห์ข้อมูล</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="เมนูหลัก">
+      <div class="brand">
+        <div class="brand-mark">R</div>
+        <div class="brand-copy">
+          <strong>RESEARCH</strong>
+          <span>Chapter 4 Dashboard</span>
+        </div>
+        <button class="icon-btn sidebar-collapse" id="sidebarCollapse" aria-label="ย่อเมนู">←</button>
+      </div>
+      <nav class="nav" id="nav"></nav>
+      <div class="sidebar-note">
+        <span class="mini-label">MASTER'S THESIS</span>
+        <p>Premium Academic Executive Dashboard</p>
+      </div>
+    </aside>
+
+    <div class="main-shell">
+      <header id="topbar" class="topbar">
+        <div class="topbar-left">
+          <button id="mobileMenu" class="icon-btn mobile-menu" aria-label="เปิดเมนู">☰</button>
+          <div>
+            <div class="eyebrow">บทที่ 4 · ผลการวิเคราะห์ข้อมูล</div>
+            <h1 id="topbarTitle">ภาพรวมผลการวิจัย</h1>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button class="action-btn" id="presentationBtn" title="Presentation Mode">▣ <span>Presentation</span></button>
+          <button class="action-btn" id="fullscreenBtn" title="Fullscreen">⛶ <span>Fullscreen</span></button>
+          <div class="export-menu-wrap">
+            <button class="action-btn primary" id="exportMenuBtn">⇩ <span>Export</span></button>
+            <div class="export-menu" id="exportMenu">
+              <button data-export="pdf">Export PDF</button>
+              <button data-export="png">Export PNG</button>
+              <button data-export="print">Print</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main id="mainContent" class="main-content">
+        <section id="overview" class="dashboard-section active-section" data-title="ภาพรวมผลการวิจัย"></section>
+        <section id="current-desired" class="dashboard-section" data-title="สภาพปัจจุบันและสภาพที่พึงประสงค์"></section>
+        <section id="priority" class="dashboard-section" data-title="ลำดับความต้องการจำเป็นในการพัฒนา"></section>
+        <section id="areas" class="dashboard-section" data-title="6 ด้านการบริหารงานวิชาการ"></section>
+        <section id="swot" class="dashboard-section" data-title="การวิเคราะห์สภาพแวดล้อม"></section>
+        <section id="tows" class="dashboard-section" data-title="จาก SWOT สู่ TOWS Matrix"></section>
+        <section id="strategies" class="dashboard-section" data-title="กลยุทธ์การบริหารงานวิชาการที่พัฒนาขึ้น"></section>
+        <section id="evaluation" class="dashboard-section" data-title="ผลการประเมินความเหมาะสมและความเป็นไปได้"></section>
+      </main>
+
+      <footer id="footer" class="footer">
+        <div>
+          <strong>กลยุทธ์การบริหารงานวิชาการที่มีประสิทธิผลของโรงเรียน</strong>
+          <span>สังกัดสำนักงานเขตพื้นที่การศึกษามัธยมศึกษาร้อยเอ็ด</span>
+        </div>
+        <div class="footer-author">ผู้วิจัย <strong>สุพักตร์ศิริ พืชสิงห์</strong></div>
+      </footer>
+    </div>
+  </div>
+
+  <div id="presentationControls" class="presentation-controls" aria-hidden="true">
+    <button id="prevSection">← ก่อนหน้า</button>
+    <span id="presentationCounter">1 / 8</span>
+    <button id="nextSection">ถัดไป →</button>
+    <button id="exitPresentation">ออกจากโหมดนำเสนอ ✕</button>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="loadingOverlay" class="loading-overlay" aria-hidden="true"><div class="loader"></div><span>กำลังสร้างไฟล์...</span></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
